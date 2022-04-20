@@ -47,6 +47,13 @@
 	      		<!-- 리턴타입 없음, kr.hs.study.benas.패키지의 모든 클래스, method1() -->
 	      		<aop:pointcut expression="execution(void kr.hs.study.beans.*.method1(..))" id="point"/>
 	      		
+	      		<!-- 리턴타입 없음, 모든패키지의 모든 클래스, 모든 메서드() -->
+	      		<aop:pointcut expression="execution(void *.*(..))" id="point"/>
+	      		
+	      		<!-- 리턴타입: int, 모든 패키지의 모든 클래스, 모든 메서드() -->
+	      		<!-- int 리턴 타입 만들어 주소 실행 -->
+	      		
+	      		<!--  -->
 	      		
 	      		<aop:before method="beforeMethod" pointcut-ref="point"/>
 	      	</aop:aspect>
